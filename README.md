@@ -1,21 +1,20 @@
 # Godot-ShareImage
-This is an Android module for [Godot Engine ](https://github.com/okamstudio/godot)
+This is an Android module for [Godot Engine](https://github.com/okamstudio/godot).
 
 This module can create images in Android External storage and share them via Intents.
 
 ## Installation
-Copy `shareimage` folder inside the `modules` directory of the Godot source.
+- Copy `shareimage` folder inside the `modules` directory of the Godot source.
 
-Then [recompile](https://godot.readthedocs.io/en/stable/development/compiling/compiling_for_android.html). 
+- You must [recompile](https://godot.readthedocs.io/en/stable/development/compiling/compiling_for_android.html) Godot for Android.
 
-You need to grant both WRITE_EXTERNAL_STORAGE and READ_EXTERNAL_STORAGE permissions in order for this module to work properly.
+- You need to grant both `WRITE_EXTERNAL_STORAGE` and `READ_EXTERNAL_STORAGE` permissions in order for this module to work properly. **Important:** Starting with Android 6.0 (API level 23) it's not enough to just include the permissions in your `export.cfg`. You must request them from the user at runtime. To do so, you can use this [module](https://github.com/vanyasem/Godot-AndroidPermissions).
 
-Finally, you need to include the module in your `engine.cfg`
-
-	[android]
-	modules="org/godotengine/godot/ShareImage"
-
-If you have more than one module separete them by comma.
+- Finally, you need to include the module in your `engine.cfg` (if you have more than one module separate them by comma):
+```
+[android]
+modules="org/godotengine/godot/ShareImage"
+```
 
 ## How to use
 It's very simple, here's a small snipper:
