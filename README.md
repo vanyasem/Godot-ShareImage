@@ -57,7 +57,7 @@ init(instanceId, shareTitle, debug)
 
 # Get external path for a file with given name
 # @param String fileName The name of a file
-getAndroidExternalPath(final String fileName)
+getAndroidExternalPath(fileName)
 
 # Path returned callback
 # @param String path Path of an image
